@@ -1,0 +1,21 @@
+---
+---
+<section id="juego">
+  <h2><small>07</small>Juego · Trivia "¿0 o ∞?"</h2>
+  <div class="card" id="quiz"></div>
+</section>
+
+<script>
+import { preguntas } from '../data/quiz';
+const $=(id)=>document.getElementById(id);
+const Q = preguntas;
+let qi=0,score=0;
+function showQ(){const el=$('quiz');if(qi>=Q.length){
+ el.innerHTML='<h3>¡Terminaste!</h3><p style="font-size:22px">Puntaje: <b>'+score+' / '+Q.length+'</b></p><p>'+(score>=8?'🏆 ¡Nivel infinito, Cantor estaría orgulloso!':score>=5?'💡 ¡Bien! Tu lógica está en 1.':'🔁 Repasa las secciones y vuelve a intentarlo.')+'</p><button class="btn" id="again">Jugar de nuevo</button>';$('again').onclick=()=>{qi=0;score=0;showQ()};return}
+ const [p,o,c,e]=Q[qi];
+ el.innerHTML='<div style="color:var(--mut);font-size:14px">Pregunta '+(qi+1)+' de '+Q.length+' · Puntaje '+score+'</div><div class="bar"><i style="width:'+(qi/Q.length*100)+'%"></i></div><h3>'+p+'</h3>'+o.map((t,i)=>'<button class="opt" data-i="'+i+'">'+t+'</button>').join('')+'<p id="exp"></p>';
+ el.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{const i=+b.dataset.i;el.querySelectorAll('.opt').forEach(x=>x.disabled=true);
+  el.querySelectorAll('.opt')[c].classList.add('ok');if(i==c)score++;else b.classList.add('no');
+  $('exp').innerHTML=(i==c?'✅ ':'❌ ')+e+' <br><button class="btn" style="margin-top:10px" id="nx">Siguiente →</button>';$('nx').onclick=()=>{qi++;showQ()};});}
+showQ();
+</script>

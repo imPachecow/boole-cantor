@@ -1,0 +1,132 @@
+[
+ {
+  "quien": "b",
+  "anio": "1815",
+  "texto": "Nace en Lincoln, Inglaterra."
+ },
+ {
+  "quien": "b",
+  "anio": "1831",
+  "texto": "Con 16 años trabaja como maestro auxiliar para mantener a su familia."
+ },
+ {
+  "quien": "b",
+  "anio": "1834",
+  "texto": "Abre su propia escuela en Lincoln."
+ },
+ {
+  "quien": "b",
+  "anio": "1844",
+  "texto": "Medalla Real de la Royal Society."
+ },
+ {
+  "quien": "c",
+  "anio": "1845",
+  "texto": "Nace en San Petersburgo, Rusia."
+ },
+ {
+  "quien": "b",
+  "anio": "1847",
+  "texto": "<i>The Mathematical Analysis of Logic</i>: la lógica se vuelve álgebra."
+ },
+ {
+  "quien": "b",
+  "anio": "1849",
+  "texto": "Primer profesor de matemáticas del Queen's College Cork."
+ },
+ {
+  "quien": "b",
+  "anio": "1854",
+  "texto": "Publica <i>Las leyes del pensamiento</i>."
+ },
+ {
+  "quien": "b",
+  "anio": "1855",
+  "texto": "Se casa con Mary Everest."
+ },
+ {
+  "quien": "c",
+  "anio": "1856",
+  "texto": "Su familia se muda a Alemania."
+ },
+ {
+  "quien": "b",
+  "anio": "1857",
+  "texto": "Es elegido miembro (Fellow) de la Royal Society."
+ },
+ {
+  "quien": "c",
+  "anio": "1862",
+  "texto": "Comienza estudios en el Politécnico de Zúrich."
+ },
+ {
+  "quien": "b",
+  "anio": "1864",
+  "texto": "Muere de neumonía en Ballintemple, Cork."
+ },
+ {
+  "quien": "c",
+  "anio": "1867",
+  "texto": "Doctorado en la Universidad de Berlín."
+ },
+ {
+  "quien": "c",
+  "anio": "1869",
+  "texto": "Llega a la Universidad de Halle, donde trabajará toda su vida."
+ },
+ {
+  "quien": "c",
+  "anio": "1874",
+  "texto": "Demuestra que los números reales no son numerables. Se casa con Vally Guttmann."
+ },
+ {
+  "quien": "c",
+  "anio": "1877",
+  "texto": "Carta a Dedekind: \"¡Lo veo, pero no lo creo!\" (la recta y el plano tienen igual cantidad de puntos)."
+ },
+ {
+  "quien": "c",
+  "anio": "1883",
+  "texto": "<i>Grundlagen</i>: teoría general de conjuntos. Aparece el \"conjunto de Cantor\"."
+ },
+ {
+  "quien": "c",
+  "anio": "1884",
+  "texto": "Primera crisis depresiva, en medio de las críticas de Kronecker."
+ },
+ {
+  "quien": "c",
+  "anio": "1890",
+  "texto": "Funda la Sociedad Matemática Alemana (DMV)."
+ },
+ {
+  "quien": "c",
+  "anio": "1891",
+  "texto": "Argumento diagonal y teorema de Cantor: siempre existe un infinito mayor."
+ },
+ {
+  "quien": "c",
+  "anio": "1895–97",
+  "texto": "Publica la teoría de los números transfinitos."
+ },
+ {
+  "quien": "c",
+  "anio": "1900",
+  "texto": "Hilbert pone la hipótesis del continuo como el problema n.º 1 de su lista de 23."
+ },
+ {
+  "quien": "c",
+  "anio": "1904",
+  "texto": "Recibe la Medalla Sylvester de la Royal Society."
+ },
+ {
+  "quien": "c",
+  "anio": "1918",
+  "texto": "Muere en Halle, Alemania."
+ },
+ {
+  "quien": "x",
+  "anio": "1937 · Legado",
+  "texto": "Claude Shannon demuestra que los circuitos eléctricos obedecen el álgebra de Boole: nace la electrónica digital."
+ }
+]

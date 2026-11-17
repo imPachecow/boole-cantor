@@ -1,0 +1,30 @@
+---
+import lineas from '../data/podcast.json';
+---
+<section id="podcast">
+  <h2><small>06</small>Podcast · "Ceros, unos e infinitos"</h2>
+  <div class="card">
+    <p>Episodio de ≈4 minutos. Guion escrito con apoyo de IA y narrado con voz sintética del navegador (Web Speech API). Pulsa reproducir y sigue el texto resaltado.</p>
+    <audio id="mp3" controls src={`${import.meta.env.BASE_URL}podcast.mp3`} style="width:100%;margin-bottom:10px" onerror="this.style.display='none'"></audio>
+    <div class="sw"><button class="btn" id="play">▶ Escuchar con voz IA</button><button class="btn ghost" id="pause">⏸ Pausa</button><button class="btn ghost" id="stop">⏹ Detener</button></div>
+    <details open><summary>Ver guion</summary>
+    <div id="guion">
+      {lineas.map((l) => <p data-v={l.voz}><b>{l.voz === "A" ? "ANA:" : "LEO:"}</b> {l.texto}</p>)}
+    </div></details>
+  </div>
+</section>
+
+<script>
+const $=(id)=>document.getElementById(id);
+const ps=[...document.querySelectorAll('#guion p')];
+function stop(){speechSynthesis.cancel();ps.forEach(p=>p.classList.remove('now'))}
+$('play').onclick=()=>{if(!('speechSynthesis'in window))return alert('Tu navegador no soporta voz sintética.');
+ if(speechSynthesis.paused){speechSynthesis.resume();return}
+ stop();const vs=speechSynthesis.getVoices().filter(v=>v.lang.startsWith('es'));
+ ps.forEach((p,i)=>{const u=new SpeechSynthesisUtterance(p.textContent.replace(/^\s*\w+:\s*/,''));u.lang='es-ES';
+  if(vs.length)u.voice=vs[(p.dataset.v=='L'?1:0)%vs.length];u.pitch=p.dataset.v=='L'?.85:1.15;
+  u.onstart=()=>{ps.forEach(x=>x.classList.remove('now'));p.classList.add('now');p.scrollIntoView({block:'nearest',behavior:'smooth'})};
+  if(i==ps.length-1)u.onend=()=>p.classList.remove('now');speechSynthesis.speak(u);});};
+$('pause').onclick=()=>speechSynthesis.pause();$('stop').onclick=stop;
+if('speechSynthesis'in window)speechSynthesis.getVoices();
+</script>

@@ -1,0 +1,12 @@
+---
+import timeline from '../data/timeline.json';
+---
+<section id="linea">
+  <h2><small>03</small>Línea de tiempo</h2>
+  <p class="legend"><span class="tb">● George Boole</span><span class="tc">● Georg Cantor</span></p>
+  <ul class="tl">
+    {timeline.map((e) => (
+      <li class={e.quien}><div class="y">{e.anio}</div><Fragment set:html={e.texto} /></li>
+    ))}
+  </ul>
+</section>

@@ -1,0 +1,102 @@
+[
+ {
+  "voz": "A",
+  "texto": "Bienvenidos a \"Ceros, unos e infinitos\", el podcast donde las matemáticas cuentan historias. Hoy hablamos de dos genios del siglo diecinueve: George Boole y Georg Cantor."
+ },
+ {
+  "voz": "L",
+  "texto": "Dos nombres casi iguales y dos ideas gigantes. Uno enseñó a calcular con la lógica; el otro se atrevió a medir el infinito."
+ },
+ {
+  "voz": "A",
+  "texto": "Empecemos por Boole. Nació en Lincoln, Inglaterra, en 1815. Su padre era zapatero y amaba los instrumentos científicos, pero la familia era pobre."
+ },
+ {
+  "voz": "L",
+  "texto": "Tan pobre que George dejó la escuela a los dieciséis años para trabajar como profesor auxiliar. Todo lo demás lo aprendió solo: latín, griego, francés, alemán y matemáticas avanzadas."
+ },
+ {
+  "voz": "A",
+  "texto": "A los diecinueve ya tenía su propia escuela. Y en 1844 la Royal Society le dio una medalla por un artículo de análisis matemático. ¡Sin título universitario!"
+ },
+ {
+  "voz": "L",
+  "texto": "Su gran idea llegó en 1847 y se completó en 1854 con el libro \"Las leyes del pensamiento\". Boole propuso que el razonamiento se puede escribir como álgebra."
+ },
+ {
+  "voz": "A",
+  "texto": "Explícalo fácil."
+ },
+ {
+  "voz": "L",
+  "texto": "Imagina que verdadero vale uno y falso vale cero. La palabra \"y\" funciona como una multiplicación: uno por cero da cero, así que si una parte es falsa, todo es falso. La palabra \"o\" se parece a una suma. Y \"no\" cambia el uno por el cero."
+ },
+ {
+  "voz": "A",
+  "texto": "Y hay una regla curiosa: equis al cuadrado es igual a equis. Decir \"llueve y llueve\" es lo mismo que decir \"llueve\"."
+ },
+ {
+  "voz": "L",
+  "texto": "En 1849 se convirtió en el primer profesor de matemáticas del Queen's College de Cork, en Irlanda. Allí se casó con Mary Everest, que después fue una gran educadora matemática."
+ },
+ {
+  "voz": "A",
+  "texto": "Por desgracia murió joven, en 1864, de una neumonía después de caminar bajo la lluvia para dar clase. Pero su idea esperó su momento."
+ },
+ {
+  "voz": "L",
+  "texto": "Ese momento llegó en 1937, cuando Claude Shannon, un estudiante del MIT, descubrió que los circuitos con interruptores obedecen exactamente el álgebra de Boole. Así nació el diseño de circuitos digitales."
+ },
+ {
+  "voz": "A",
+  "texto": "O sea que cada vez que usas tu celular, millones de compuertas lógicas hacen el trabajo de Boole."
+ },
+ {
+  "voz": "L",
+  "texto": "Exacto. Ahora viajemos a Rusia. Georg Cantor nació en San Petersburgo en 1845 y creció en Alemania."
+ },
+ {
+  "voz": "A",
+  "texto": "Estudió en Zúrich y en Berlín con maestros como Weierstrass y Kronecker, y pasó toda su carrera en la Universidad de Halle."
+ },
+ {
+  "voz": "L",
+  "texto": "Cantor hizo una pregunta que parece de niños: ¿todos los infinitos son del mismo tamaño?"
+ },
+ {
+  "voz": "A",
+  "texto": "Y la respuesta fue no. Para comparar conjuntos infinitos usó parejas: si puedes emparejar cada elemento de uno con uno del otro, sin que sobre nadie, tienen el mismo tamaño."
+ },
+ {
+  "voz": "L",
+  "texto": "Por eso hay tantos números pares como números naturales: al uno le toca el dos, al dos el cuatro, al tres el seis, y las parejas nunca se acaban."
+ },
+ {
+  "voz": "A",
+  "texto": "Pero con los números reales eso falla. Con su famoso argumento diagonal, Cantor demostró que cualquier lista de números reales siempre deja alguno por fuera. Hay infinitos más grandes que otros."
+ },
+ {
+  "voz": "L",
+  "texto": "Y no solo dos: demostró que siempre se puede construir un infinito mayor. Una escalera sin fin de infinitos."
+ },
+ {
+  "voz": "A",
+  "texto": "Muchos no lo aceptaron. Kronecker, que había sido su profesor, lo atacó con dureza, y Cantor sufrió fuertes episodios de depresión."
+ },
+ {
+  "voz": "L",
+  "texto": "Pero el tiempo le dio la razón. David Hilbert dijo que nadie podría expulsarnos del paraíso que Cantor había creado. Hoy la teoría de conjuntos es el lenguaje de casi todas las matemáticas."
+ },
+ {
+  "voz": "A",
+  "texto": "Y en computación, la idea diagonal de Cantor inspiró a Alan Turing para demostrar que hay problemas que ninguna computadora puede resolver."
+ },
+ {
+  "voz": "L",
+  "texto": "Resumiendo: Boole nos dio el cero y el uno de la lógica; Cantor nos dio el mapa del infinito."
+ },
+ {
+  "voz": "A",
+  "texto": "Y las computadoras viven justo entre los dos. Gracias por escucharnos. ¡Hasta el próximo episodio de \"Ceros, unos e infinitos\"!"
+ }
+]

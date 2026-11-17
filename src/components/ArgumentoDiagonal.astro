@@ -1,0 +1,18 @@
+---
+---
+<h3 style="font-size:20px">Pruébalo: el argumento diagonal</h3>
+      <p style="font-size:14px;color:var(--mut)">Supón que tienes una lista "completa" de números entre 0 y 1 (en binario). Cambia cada dígito de la diagonal y obtienes un número que <b>no está</b> en la lista.</p>
+      <div id="diag"></div>
+      <button class="btn" id="diagBtn">Generar otra lista</button>
+
+<script>
+const $=(id)=>document.getElementById(id);
+function diag(){const n=6;let rows=[],h='<table class="diag">';
+ for(let i=0;i<n;i++){rows.push(Array.from({length:8},()=>Math.random()<.5?0:1));
+  h+='<tr><th>r'+(i+1)+'</th><td>0.</td>'+rows[i].map((d,j)=>'<td class="'+(i==j?'d':'')+'">'+d+'</td>').join('')+'</tr>';}
+ const nuevo=rows.map((r,i)=>1-r[i]);
+ h+='<tr><th class="tc">nuevo</th><td>0.</td>'+nuevo.map(d=>'<td class="d">'+d+'</td>').join('')+'<td colspan="2">…</td></tr></table>';
+ h+='<p style="font-size:14px">El número nuevo difiere de r1 en el dígito 1, de r2 en el dígito 2… así que <b class="tc">no es igual a ninguno de la lista</b>. Ninguna lista puede contener a todos los reales.</p>';
+ $('diag').innerHTML=h;}
+$('diagBtn').onclick=diag;diag();
+</script>

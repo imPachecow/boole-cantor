@@ -1,0 +1,50 @@
+---
+import CircuitoBooleano from './CircuitoBooleano.astro';
+import ArgumentoDiagonal from './ArgumentoDiagonal.astro';
+---
+<section id="aportes">
+  <h2><small>04</small>Aportes a las matemáticas</h2>
+  <div class="grid2">
+    <article class="card b">
+      <div class="tag">Boole · Álgebra booleana</div>
+      <h3>Pensar es calcular</h3>
+      <p>Boole representó las ideas con letras y usó solo dos valores: <b>1 = verdadero</b> y <b>0 = falso</b>. Las palabras de la lógica se vuelven operaciones:</p>
+      <ul>
+        <li><b>Y (AND)</b> → multiplicación: <code>A·B</code> vale 1 solo si ambos valen 1.</li>
+        <li><b>O (OR)</b> → <code>A+B</code> vale 1 si al menos uno vale 1.</li>
+        <li><b>NO (NOT)</b> → <code>¬A = 1 − A</code> invierte el valor.</li>
+      </ul>
+      <p>Su ley más famosa es <code>x² = x</code> (idempotencia): decir "llueve y llueve" es igual que decir "llueve". En números comunes eso solo se cumple con 0 y 1, ¡justo los valores que usa!</p>
+      <h3 style="font-size:20px">Ejercicio resuelto</h3>
+      <p>Simplificar <code>F = A·B + A·¬B + ¬A·B</code></p>
+      <p class="mono" style="font-size:14px">
+      1) A·B + A·¬B = A·(B + ¬B) = A·1 = A<br>
+      2) F = A + ¬A·B<br>
+      3) A + ¬A·B = (A + ¬A)·(A + B) = 1·(A + B)<br>
+      ∴ <b class="tb">F = A + B</b> (una sola compuerta OR)</p>
+      <table><tr><th>A</th><th>B</th><th>A·B + A·¬B + ¬A·B</th><th>A + B</th></tr>
+      <tr><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+      <tr><td>1</td><td>0</td><td>1</td><td>1</td></tr><tr><td>1</td><td>1</td><td>1</td><td>1</td></tr></table>
+      <p>La tabla de verdad confirma que ambas expresiones son iguales. Así los ingenieros ahorran compuertas en los chips.</p>
+      <CircuitoBooleano />
+    </article>
+    <article class="card c">
+      <div class="tag">Cantor · Teoría de conjuntos</div>
+      <h3>No todos los infinitos son iguales</h3>
+      <p>Un <b>conjunto</b> es una colección de objetos. Para comparar tamaños sin contar, Cantor usó <b>correspondencias uno a uno</b> (biyecciones): si cada elemento de A se empareja con exactamente uno de B, tienen el mismo tamaño o <b>cardinal</b>.</p>
+      <ul>
+        <li>Los naturales, enteros y racionales tienen el mismo cardinal: <b>ℵ₀</b> (alef cero), son <i>numerables</i>.</li>
+        <li>Los números reales son <b>más</b>: no se pueden poner en una lista (argumento diagonal).</li>
+        <li><b>Teorema de Cantor:</b> el conjunto de todos los subconjuntos de A siempre es más grande que A. Hay una escalera infinita de infinitos.</li>
+      </ul>
+      <h3 style="font-size:20px">Ejercicio resuelto 1</h3>
+      <p>¿Hay tantos números pares como naturales?</p>
+      <p class="mono" style="font-size:14px">f(n) = 2n<br>1→2, 2→4, 3→6, 4→8, …<br>· Inyectiva: si 2n = 2m ⇒ n = m<br>· Sobreyectiva: cada par p = 2k viene de k<br>∴ <b class="tc">|Pares| = |ℕ| = ℵ₀</b></p>
+      <p>¡Una parte puede ser tan grande como el todo! Eso solo pasa con conjuntos infinitos.</p>
+      <h3 style="font-size:20px">Ejercicio resuelto 2</h3>
+      <p>Si A = {a, b, c}, ¿cuántos subconjuntos tiene?</p>
+      <p class="mono" style="font-size:14px">∅, {a}, {b}, {c}, {a,b}, {a,c}, {b,c}, {a,b,c}<br>Total = 2³ = <b class="tc">8 &gt; 3</b></p>
+      <ArgumentoDiagonal />
+    </article>
+  </div>
+</section>

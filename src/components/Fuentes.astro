@@ -1,0 +1,9 @@
+---
+import fuentes from '../data/fuentes.json';
+---
+<section id="fuentes">
+  <h2><small>09</small>Fuentes (APA 7)</h2>
+  <div class="card"><ol class="apa">
+    {fuentes.map((f) => <li set:html={f} />)}
+  </ol></div>
+</section>

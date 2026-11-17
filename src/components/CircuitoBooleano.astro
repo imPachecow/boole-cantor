@@ -1,0 +1,16 @@
+---
+---
+<h3 style="font-size:20px">Pruébalo: circuito interactivo</h3>
+      <div class="sw"><button class="btn ghost" id="swA">A = 0</button><button class="btn ghost" id="swB">B = 0</button></div>
+      <div class="lamps">
+        <div class="lamp" id="lAND"><i></i>A·B<br>AND</div><div class="lamp" id="lOR"><i></i>A+B<br>OR</div>
+        <div class="lamp" id="lNOT"><i></i>¬A<br>NOT</div><div class="lamp" id="lXOR"><i></i>A⊕B<br>XOR</div>
+      </div>
+
+<script>
+const $=(id)=>document.getElementById(id);
+let A=0,B=0;const $=id=>document.getElementById(id);
+function upd(){$('swA').textContent='A = '+A;$('swB').textContent='B = '+B;
+ const o={lAND:A&B,lOR:A|B,lNOT:1-A,lXOR:A^B};for(const k in o)$(k).classList.toggle('on',!!o[k]);}
+$('swA').onclick=()=>{A^=1;upd()};$('swB').onclick=()=>{B^=1;upd()};upd();
+</script>

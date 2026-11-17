@@ -1,0 +1,22 @@
+---
+---
+<section id="entrevista">
+  <h2><small>Extra</small>Entrevista simulada: pregúntales tú</h2>
+  <div class="card">
+    <p style="color:var(--mut);font-size:14px">Chatbot sencillo que "responde" como el matemático elegido (respuestas escritas con apoyo de IA a partir de su biografía). Prueba con: <span class="chip">infinito</span><span class="chip">álgebra</span><span class="chip">computador</span><span class="chip">familia</span><span class="chip">Kronecker</span></p>
+    <div class="chat" id="chat"></div>
+    <form class="chatin" id="chatf"><select id="who"><option value="b">George Boole</option><option value="c">Georg Cantor</option></select><input id="q" placeholder="Escribe tu pregunta…" autocomplete="off"><button class="btn">Enviar</button></form>
+  </div>
+</section>
+
+<script>
+import { respuestas } from '../data/chatbot';
+const $=(id)=>document.getElementById(id);
+const R = respuestas;
+const norm=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+function add(t,c){const d=document.createElement('div');d.className='msg '+c;d.textContent=t;$('chat').appendChild(d);$('chat').scrollTop=1e6}
+$('chatf').onsubmit=e=>{e.preventDefault();const q=$('q').value.trim();if(!q)return;const w=$('who').value;add(q,'u');$('q').value='';
+ const s=norm(q);const r=R[w].find(([k])=>k.some(x=>s.includes(x)));
+ setTimeout(()=>add(r?r[1]:(w=='b'?'Interesante pregunta. Intente preguntarme por la lógica, mi familia o los computadores.':'Hmm… pregúnteme por el infinito, el argumento diagonal o Kronecker.'),'m'),350);};
+add('¡Hola! Elige a Boole o a Cantor y hazle una pregunta.','m');
+</script>
