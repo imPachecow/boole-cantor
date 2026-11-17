@@ -9,7 +9,7 @@
 
 <script>
 const $=(id)=>document.getElementById(id);
-let A=0,B=0;const $=id=>document.getElementById(id);
+let A=0,B=0;
 function upd(){$('swA').textContent='A = '+A;$('swB').textContent='B = '+B;
  const o={lAND:A&B,lOR:A|B,lNOT:1-A,lXOR:A^B};for(const k in o)$(k).classList.toggle('on',!!o[k]);}
 $('swA').onclick=()=>{A^=1;upd()};$('swB').onclick=()=>{B^=1;upd()};upd();
